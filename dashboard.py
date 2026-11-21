@@ -70,7 +70,7 @@ def load_offline_sample():
 
 if data_source == "Sample Data (Offline Mode)":
     df = load_offline_sample()
-    st.sidebar.info("📊 Using local offline dataset (1,877 candles).")
+    st.sidebar.info(f"📊 Using local offline dataset ({len(df):,} candles).")
 else:
     try:
         with st.spinner(f"Fetching live data for {stock}..."):
